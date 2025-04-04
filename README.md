@@ -26,10 +26,6 @@ src/
       │   ├── inicio/
       │   ├── login/
       │   └── menu/
-      │       ├── menu.component.html
-      │       ├── menu.component.scss
-      │       ├── menu.component.spec.ts
-      │       └── menu.component.ts
       ├── app.component.html
       ├── app.component.scss
       ├── app.component.spec.ts
