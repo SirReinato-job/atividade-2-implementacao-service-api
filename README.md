@@ -1,59 +1,105 @@
-# LojaGames
+# LH Games - Documentação do Projeto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Este projeto é uma versão atualizada da **LH Games**, reconstruída com **Angular CLI**, **Angular Material** e **Bootstrap**. O objetivo é oferecer uma aplicação moderna, responsiva e escalável para uma loja de jogos online.
 
-## Development server
+## Estrutura do Projeto
 
-To start a local development server, run:
+O projeto está organizado da seguinte forma:
 
-```bash
-ng serve
+- **Angular CLI** – Framework para construção de aplicações SPA.
+- **Angular Material** – Biblioteca de componentes UI com Material Design.
+- **Bootstrap** – Framework CSS utilizado para responsividade e carrossel.
+- **TypeScript** – Linguagem base do Angular.
+- **SCSS** – Utilizado para a estilização modularizada.
+
+## 📁 Estrutura do Projeto
+
+```plaintext
+public/
+  └── node_modules/
+
+src/
+  └── app/
+      ├── components/
+      │   ├── carrossel/
+      │   ├── footer/
+      │   ├── inicio/
+      │   ├── login/
+      │   └── menu/
+      │       ├── menu.component.html
+      │       ├── menu.component.scss
+      │       ├── menu.component.spec.ts
+      │       └── menu.component.ts
+      ├── app.component.html
+      ├── app.component.scss
+      ├── app.component.spec.ts
+      ├── app.component.ts
+      ├── app.config.ts
+      ├── app.routes.ts
+      ├── app.routes.server.ts
+  └── assets/
+  └── environments/
+  └── index.html
+  └── main.server.ts
+  └── main.ts
+  └── server.ts
+  └── styles.scss
+
+.gitignore
+.angular.json
+package-lock.json
+package.json
+README.md
+.tsconfig.app.json
+.tsconfig.json
+.tsconfig.spec.json
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚙️ Principais Funcionalidades
 
-## Code scaffolding
+A navegação é controlada por rotas declaradas no app-routing.module.ts, utilizando os componentes RouterOutlet, RouterLink e RouterLinkActive.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🎨 Interface com Angular Material
 
-```bash
-ng generate component component-name
-```
+- MatToolbarModule para a barra de navegação superior
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- MatIconModule para ícones modernos
 
-```bash
-ng generate --help
-```
+- MatButtonModule para botões com design responsivo
 
-## Building
+- Estilo adaptado com SCSS modularizado por componente
 
-To build the project run:
+## 🎠 Carrossel com Bootstrap
 
-```bash
-ng build
-```
+O carrossel de banners promocionais é implementado com o componente Carousel do Bootstrap, garantindo um layout responsivo e amigável em diferentes dispositivos.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## ✅ Funcionalidades Implementadas
 
-## Running unit tests
+- Página inicial com banners, jogos em destaque e cards responsivos.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Sistema de navegação SPA com rotas protegidas.
 
-```bash
-ng test
-```
+- Página de login com validação.
 
-## Running end-to-end tests
+- Cadastro de usuários com feedback visual.
 
-For end-to-end (e2e) testing, run:
+- Estrutura modular para fácil manutenção e escalabilidade.
 
-```bash
-ng e2e
-```
+- Utilização de serviços para abstração de funcionalidades futuras (ex: carrinho, autenticação).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Dependências
 
-## Additional Resources
+- @angular/material
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- @angular/router
+
+- bootstrap
+
+- rxjs
+
+- zone.js
+
+## 📌 Considerações Finais
+
+Este projeto marca uma transição da versão estática em HTML/CSS/JS para uma aplicação SPA com Angular, oferecendo uma base sólida para futuras funcionalidades como back-end integrado, banco de dados, e-commerce real e painéis administrativos.
+Sinta-se à vontade para explorar, contribuir e sugerir melhorias.
