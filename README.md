@@ -2,6 +2,25 @@
 
 Este projeto é uma versão atualizada da **LH Games**, reconstruída com **Angular CLI**, **Angular Material** e **Bootstrap**. O objetivo é oferecer uma aplicação moderna, responsiva e escalável para uma loja de jogos online.
 
+ ## Atualização: Integração com JSON-Server
+Nesta etapa do projeto, foi implementada a integração entre o frontend Angular e uma **API REST** fake via **JSON-server**, permitindo listagem e cadastro de produtos de forma dinâmica.
+
+### 🧩 Funcionalidades da Atividade
+
+- **Painel Principal**
+  - Exibe a **lista de produtos** consumindo dados de uma API local via JSON-server.
+  - Permite excluir ou navegar até a tela de edição de um produto.
+  
+- **Cadastro de Produtos**
+  - Componente reutilizável para **cadastro e edição**.
+  - Integração completa com a API para **adicionar** ou **atualizar** um produto existente.
+  - Utiliza `ngModel` com `FormsModule` para o two-way data binding.
+  - As rotas `cadastro-produto` e `cadastro-produto/:id` são utilizadas dinamicamente para determinar a ação.
+
+- **Produto Service**
+  - Abstração das operações de GET, POST, PUT e DELETE com a API.
+  - Organizado em `servicos/produto.service.ts`.
+
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
@@ -23,8 +42,8 @@ src/
       ├── components/
       │   ├── carrossel/
       │   ├── footer/
-      │   ├── inicio/
-      │   ├── login/
+      │   ├── cadastro-produto/
+      │   ├── painel-principal/
       │   └── menu/
       ├── app.component.html
       ├── app.component.scss
@@ -53,7 +72,8 @@ README.md
 
 ## ⚙️ Principais Funcionalidades
 
-A navegação é controlada por rotas declaradas no app-routing.module.ts, utilizando os componentes RouterOutlet, RouterLink e RouterLinkActive.
+A navegação é controlada por rotas declaradas no app.routes.ts, utilizando os componentes RouterOutlet, RouterLink e RouterLinkActive.
+Para editar um produto diretamente da listagem, também é possível utilizar a diretiva [routerLink].
 
 ## 🎨 Interface com Angular Material
 
